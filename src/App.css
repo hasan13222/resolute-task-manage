@@ -1,0 +1,74 @@
+/* hero */
+.hero-full {
+  background: url("../src/assets/hero-bg.jpg") no-repeat;
+  background-size: contain;
+  background-position: center center;
+  position: relative;
+}
+.hero-full .hero {
+  height: calc(100vh - 5rem);
+}
+.hero-full::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+/* help */
+.help-full {
+  background: url("../src/assets/help-bg.jpg") no-repeat;
+  background-size: contain;
+  background-position: center center;
+  position: relative;
+}
+.help-full::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+/* signup */
+.signup-wrap .item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 16px;
+}
+
+.signup-wrap .item label {
+  padding-left: 5px;
+}
+
+.signup-full {
+  padding: 2.5rem 0px;
+}
+
+/* tasks page */
+.allTasks__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2rem 0px;
+  grid-gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .allTasks__items {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .allTasks__items {
+    grid-template-columns: 1fr;
+  }
+}
